@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding: 20px; /* Added padding for body */
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.h4,
+h4 {
+  font-size: calc(10px + 0.4vw);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+}
+
+.printCV {
+  font-size: 30px;
+  color: #fff;
+  background-color: #0d6efd;
+  width: 150px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.printCV:hover {
+  background-color: #0056b3;
+}
+
+.cv .container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 65px rgb(0, 0, 0, 0.1);
+  margin: 30px auto; /* Reduced margin for better spacing */
+  padding: 0;
+  border-radius: 8px;
+}
+
+.cv .container .left {
+  position: relative;
+  background: #003147;
+  padding: 40px; /* Retained padding for aesthetics */
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.cv .text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.cv .text .pic {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cv .text h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+
+.cv .text span {
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #fff;
+}
+
+.cv .text .pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cv .info {
+  padding-top: 40px;
+}
+
+.cv .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.cv .info ul {
+  position: relative;
+}
+
+.cv .info #fFacebook,
+.cv .info #lLinkedin {
+  cursor: pointer;
+}
+
+.cv .info ul li {
+  list-style: none;
+  position: relative;
+  margin: 10px 0;
+}
+
+.cv .info ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+
+.cv .info ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+
+.cv .edu .title {
+  margin-top: 40px;
+}
+
+.cv .edu li {
+  margin-bottom: 15px;
+  list-style: square;
+  color: #03a9f4;
+}
+
+.cv .edu p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1em;
+}
+
+.cv .lang {
+  margin-top: 30px;
+}
+
+.cv .lang li {
+  list-style: square;
+  color: #03a9f4;
+  padding: 10px;
+}
+
+.cv .lang li span {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* About section styles */
+.cv .container .right {
+  position: relative;
+  background: #fff;
+  padding: 40px; /* Retained padding for aesthetics */
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cv .right .about h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #054969;
+}
+
+.cv .right .about p {
+  color: #333;
+  line-height: 1.5em; /* Increased line-height for better readability */
+  font-size: 16px;
+  margin: 12px 0; /* Adjusted margins */
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.cv .right .exp h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #054969;
+  margin-top: 20px;
+}
+
+.cv .exp .works h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 25px;
+  color: #054969;
+}
+
+.cv .exp .skills h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #054969;
+  margin-top: 20px;
+}
+
+.cv .exp li {
+  padding: 15px;
+  list-style: square;
+}
+
+.squar {
+  color: #0d6efd;
+  font-size: 25px;
+}
+
+.cv .exp .skills li h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #003147;
+}
+
+/* Inputs */
+.cv .data {
+  min-height: 600px; /* Added px for consistency */
+  background-color: #fff;
+  width: 100%;
+  margin: 30px auto; /* Centered margin */
+  padding: 20px; /* Added padding for better spacing */
+}
+
+.cv .data input {
+  width: 90%;
+  height: 50px;
+  margin: 10px 0; /* Adjusted vertical spacing */
+  padding: 0 10px; /* Added horizontal padding */
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 5px; /* Rounded corners for input fields */
+  border: 1px solid #ccc; /* Light border for inputs */
+}
+
+.cv .data .submit {
+  height: 50px; /* Adjusted height */
+  width: 50%;
+  cursor: pointer;
+  background: #0d6efd; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Removed border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease; /* Transition effect */
+}
+
+.cv .data .submit:hover {
+  background: #0056b3; /* Hover effect */
+}
+
+.cv .data h4 {
+  text-transform: uppercase;
+  font-weight: 700; /* Increased weight for emphasis */
+  color: #1a6283;
+  margin: 20px 0; /* Added vertical margin */
+}
+
+.btnN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.5 all ease-in-out;
+  
+}
+
+.printCV:hover {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.wrapper {
+  background: #003147;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%; /* Changed to 100% for better responsiveness */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 40px 0; /* Adjusted vertical margin */
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px; /* Added bottom margin */
+}
+
+hr {
+  width: 100px;
+  margin: 10px auto;
+  border: 1px solid #fff; /* Changed to white for better visibility */
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+}
+
+.team-mem {
+  margin: 15px; /* Adjusted margin for team members */
+  text-align: center; /* Center-align text */
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 2px solid #fff; /*Added a border for a more polished look */
+}
+
+h5,
+p {
+  font-size: 12px;
+  margin: 7px;
+  color: #fff;
+}

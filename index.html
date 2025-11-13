@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeSpark</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="ResumeSpark Logo" class="logo">
+            </a>
+            <div class="right-buttons">
+                <a class="Sign-in" href="login.html" id="Sign-inBtn">Sign in</a>
+                <a class="Sign-up" href="Sign-up.html" id="Sign-upBtn">Sign up</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#templates">Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Ignite Your Career with a Perfect Resume</h1>
+            <p class="hero-subtitle">Build your professional resume in minutes with our easy-to-use platform.</p>
+            <a href="index1.html" class="btn hero-btn">Start Building Your Resume</a>
+        </div>
+    </section>
+    <section class="features-section" id="features">
+        <h2 class="section-title">Why Choose ResumeSpark?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h5 class="card-title">Customizable Templates</h5>
+                <p class="card-text">Select from a wide range of professionally designed templates to match your career goals.</p>
+            </div>
+            <div class="feature-card">
+                <h5 class="card-title">Live Preview</h5>
+                <p class="card-text">See changes to your resume in real-time as you edit and personalize each section.</p>
+            </div>
+            <div class="feature-card">
+                <h5 class="card-title">Instant Downloads</h5>
+                <p class="card-text">Export your resume instantly in multiple formats, including PDF and Word, with one click.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Templates Showcase Section -->
+<section class="templates-showcase-section" id="templates">
+    <h2 class="section-title text-center">Our Resume Templates</h2>
+    <div class="templates-grid">
+        <div class="template-card">
+            <img src="template1.jpg" alt="Template 1" class="card-img-top" loading="lazy">
+            <div class="card-body">
+                <h5 class="card-title">Modern Template</h5>
+                <a href="#" class="btn btn-outline-primary btn-block">Try This Template</a>
+            </div>
+        </div>
+        <div class="template-card">
+            <img src="template2.jpg" alt="Template 2" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Professional Template</h5>
+                <a href="#" class="btn btn-outline-primary btn-block">Try This Template</a>
+            </div>
+        </div>
+        <div class="template-card">
+            <img src="template3.jpg" alt="Template 3" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Creative Template</h5>
+                <a href="#" class="btn btn-outline-primary btn-block">Try This Template</a>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Contact Section -->
+ <section class="contact-section " id="contact">
+    <h2 class="section-title text-center">Contact Us</h2>
+    <div class="container">
+       
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- social media Icons -->
+    <div class="social-container">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.gmail.com" aria-label="Email" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </div>
+    
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</section>
+
+
+<!--Footer section-->
+    <footer>
+        <div class="wrapper">
+        <h2>DEVELOPERS</h2>
+        <hr>
+        <div class="members">
+
+            <div class="team-mem">
+                <a href="#"><img src="https://i.ibb.co/1Jnh1SSQ/passphoto.jpg" alt="passphoto" border="0"></a>                <h5>A. LALU PRASAD</h5>
+                <P>2303A51948</P>
+            </div>
+            <div class="team-mem">
+                <a href="#"><img src="https://i.ibb.co/Mk5d8GX/Screenshot-2023-11-28-182601.png" alt="2303A51409" border="0"></a>
+                <h5>J. MEGHA HARSHA</h5>
+                <P>2303A51409</P>
+            </div>
+            
+        </div>
+    </div>
+        <p style="text-align:center;">&copy; 2024 ResumeSpark. All rights reserved. </p>
+    </footer>     
+
+    
+    <script src="script.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/366deecc25.js" crossorigin="anonymous"></script>
+</body>
+</html>

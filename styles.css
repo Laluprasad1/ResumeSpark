@@ -1,0 +1,603 @@
+/* Global Styles */
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand .logo {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 180px; /* Adjust size */
+    height: 100px;
+    display: inline-block;
+    margin: 0; /* Reset margins */
+    vertical-align: middle;
+}
+@media (max-width: 700px) {
+    .navbar-brand .logo {
+        max-width: 100px; /* Adjust for smaller screens */
+    }
+}
+.right-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Sign-in,
+.Sign-up {
+    background-color: #ffbb00;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.Sign-in:hover,
+.Sign-up:hover {
+    background-color: rgb(85, 178, 156);
+}
+
+/* Navbar Styles */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background 0.3s, box-shadow 0.3s;
+    height: 100px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+} 
+
+ .main-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+} 
+
+.main-nav a:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    color: #333;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 80px; /* Adjust margin-top to account for fixed navbar */
+    background-image: url('https://wallpapers.com/images/hd/3d-red-and-black-polygon-w0xm5hsgnjeajcnr.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: rgb(85, 178, 156);
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Navbar */
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: inline-flex;
+        position: absolute;
+        top: px;
+        right: 20px;
+    }
+
+    .main-nav ul {
+        /* flex-direction: column; */
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        top: 96px;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav.active ul {
+        display: flex;
+    } 
+
+    .navbar-brand .logo {
+        width: 120px;
+        
+    }
+} 
+/* @media (max-width: 768px) {
+    .features-grid, .templates-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-card, .template-card {
+        width: 90%;
+    }
+} */
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffa500;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 170, 0, 0.2), rgba(85, 178, 156, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover .card-title {
+    color: #ffa500;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Cool Hover Animation */
+.feature-card:hover .card-title {
+    color: #ffa500;
+}
+
+.feature-card:hover .card-text {
+    color: #333;
+}
+
+.feature-card:hover .card-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ffa500;
+    margin: 0.5em auto;
+    border-radius: 1.5px;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Templates Showcase Section */
+.templates-showcase-section {
+    padding: 60px 0px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffa500;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.templates-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.template-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.template-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.template-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.template-card:hover .card-title {
+    color: #ffa500;
+}
+
+.btn-outline-primary {
+    color: #ffa500;
+    border: 2px solid #ffa500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 15px;
+    background-color: #f8f8f8; /* Light grey background */
+    text-align: center;
+}
+
+/* Contact Section Title */
+.contact-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 auto 20px; /* Adjusts space below the title */
+}
+
+/* Title Underline */
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffa500;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9; /* Light background for inputs */
+}
+
+/* Submit Button Styling */
+.contact-form button {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffa500;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Submit Button Hover Effect */
+.contact-form button:hover {
+    background-color: rgb(85, 178, 156); /* Slightly darker orange */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+.social-container {
+    text-align: center;
+}
+
+.social-container h2 {
+    font-size: 1.5rem;
+    color: #333; /* Text color */
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1b; /* Circle background color */
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background-color: #333; /* Darker shade on hover */
+}
+
+
+
+/* footer-section */
+footer {
+    background-color: rgba(0, 0, 0, 0.558);
+    padding: 40px 0;
+    color: white;
+    position: relative;
+    width: 100vw;
+    bottom: 0;
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+}
+ 
+.wrapper {
+    text-align: center;
+    padding: 50px;
+    /* background-color: rgba(0, 0, 0, 0.558); */
+    color: white;
+    width: 100vw;
+}
+  
+.wrapper h2 {
+    font-size: 2rem;
+    color: white;
+}
+  
+.wrapper hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid #555;
+}
+  
+.members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.team-mem {
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+}
+  
+
+.team-mem img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+  
+.team-mem h5 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+  
+.team-mem p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+}
+.team-mem img {
+    width: 150px; /* Set the width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow for a floating effect */
+    transition: transform 0.3s;
+}
+
+.team-mem h5,p,img:hover {
+    transform: scale(1.1); /* Slightly enlarges image on hover */
+}
