@@ -1,0 +1,39 @@
+name: Check Website
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+
+      - name: Check HTML files exist
+        run: |
+          echo "Checking if files exist..."
+          ls -la
+          # List required files here; edit to add/remove files you want to check
+          required_files=("index.html" "index1.html")
+          for f in "${required_files[@]}"; do
+            if [ -f "$f" ]; then
+              echo "✅ $f found!"
+            else
+              echo "❌ $f not found!"
+              exit 1
+            fi
+          done
+          echo "🎉 All required files present!"
+
+      - name: Validate HTML (placeholder)
+        run: |
+          echo "Checking HTML syntax..."
+          # Replace the following line with a real validator if desired, e.g.:
+          # npm install -g html-validate
+          # npx html-validate index.html index1.html
+          echo "✅ HTML looks good!"
