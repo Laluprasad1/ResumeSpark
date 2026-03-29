@@ -45,3 +45,7 @@ ResumeSpark/
 │ └── logo.png ← Application logo
 │── .vscode/ ← Editor config files (optional)
 
+## 👨‍💻 Contributors
+
+- Lalu Prasad – Project Creator
+- Megha Harsha – Frontend Development, Feature Enhancements, UI Improvements
